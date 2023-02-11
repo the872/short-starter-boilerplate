@@ -1,6 +1,18 @@
 import { Flex, Box, Image, Heading, Text } from '@chakra-ui/react'
 import {VideoComponent} from "./VideoComponent";
 
+const styles = {
+    '::-webkit-scrollbar': {
+        display: 'none',
+    },
+    '::-moz-scrollbar': {
+        display: 'none',
+    },
+    scrollbar: {
+        display: 'none',
+    },
+};
+
 export const Scroller = ({ title }: { title: string }) => (
     <Flex
         justifyContent="center"
@@ -15,9 +27,8 @@ export const Scroller = ({ title }: { title: string }) => (
             {Array(10).fill(10).map((_, i) => (
                 <Box
                     key={i}
-                    p={5}
                     position="relative"
-                    scrollSnapAlign="center"
+                    scrollSnapAlign="start"
                     height="100vh"
                 >
                    <VideoComponent />

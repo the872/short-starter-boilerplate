@@ -7,6 +7,7 @@ export default class Document extends NextDocument {
       <Html>
         <Head>
             <title>Generic Page</title>
+            <link rel="shortcut icon" href="https://iili.io/HEwxs7n.png" />
         </Head>
         <body>
           {/* Make Color mode to persists when you refresh the page. */}

@@ -14,11 +14,11 @@ const theme = extendTheme({
     colors: {
       text: {
         default: '#16161D',
-        _dark: '#ade3b8',
+        _dark: '#75AA9B',
       },
       heroGradientStart: {
         default: '#7928CA',
-        _dark: '#e3a7f9',
+        _dark: '#9B75AA',
       },
       heroGradientEnd: {
         default: '#FF0080',
@@ -30,7 +30,7 @@ const theme = extendTheme({
     },
   },
   colors: {
-    black: '#16161D',
+    black: '#16161D'
   },
   fonts,
   breakpoints,
