@@ -3,8 +3,8 @@ import {Box, Flex, FlexProps, Heading, Image, Text} from '@chakra-ui/react'
 export const TextComponent = (props: FlexProps) => (
     <Box height="100vh" background="#9B76AA" width="100vw">
         <Heading p="1rem" borderBottomRadius="1rem" fontSize="xl" background="#fff" color="#000" textAlign="center">Article Title</Heading>
-        <Flex justifyContent="center">
-            <Text display="block" maxWidth={900} height="calc(90vh - 5rem)" maxHeight="calc((.9 * -webkit-fill-available) - 5rem)" p="1rem" m="1rem" borderRadius="1rem" background="#fff" color="#000" textAlign="start" overflow="scroll">
+        <Flex justifyContent="center" maxHeight="calc(100% - 8rem)">
+            <Text display="block" maxWidth={900} p="1rem" m="1rem" borderRadius="1rem" background="#fff" color="#000" textAlign="start" overflow="scroll">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
                 molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
                 numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
