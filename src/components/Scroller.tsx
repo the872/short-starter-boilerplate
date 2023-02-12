@@ -10,8 +10,9 @@ export const Scroller = ({ title }: { title: string }) => {
 
     useEffect(() => {
         const handleScroll = () => {
+            console.log(window)
             // Check if the user has scrolled to the bottom of the page
-            if (window.innerHeight + document.documentElement.scrollTop !== document.documentElement.offsetHeight) return;
+            // if (window.innerHeight + document.documentElement.scrollTop - 500> document.documentElement.offsetHeight) return;
 
             // Avoid loading data multiple times
             if (loading) return;
@@ -19,9 +20,9 @@ export const Scroller = ({ title }: { title: string }) => {
 
             // Load more data
             setTimeout(() => {
-                setData([...data, ...Array(10).fill(10)]);
+                setData([...data, ...Array(1).fill(1)]);
                 setLoading(false);
-            }, 500);
+            }, 100);
         };
 
         window.addEventListener('scroll', handleScroll);
