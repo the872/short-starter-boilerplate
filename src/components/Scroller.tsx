@@ -20,6 +20,7 @@ export const Scroller = ({ title }: { title: string }) => (
         justifyContent="center"
         alignItems="center"
         height="100vh"
+        maxHeight="-webkit-fill-available"
         bgGradient="linear(to-l, heroGradientStart, heroGradientEnd)"
         bgClip="text"
         overflowY="scroll"
