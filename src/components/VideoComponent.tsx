@@ -49,8 +49,6 @@ export const VideoComponent = (props: FlexProps) => {
                 loop
                 muted
                 onClick={handlePlayPause}
-                controls
-                type='video/mp4'
                 style={{ cursor: 'pointer' }}
                 ref={videoRef}
                 src="https://assets.mixkit.co/videos/preview/mixkit-waves-in-the-water-1164-large.mp4"
