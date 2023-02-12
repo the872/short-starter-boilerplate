@@ -25,6 +25,18 @@ export const Scroller = ({ title }: { title: string }) => (
         bgClip="text"
         overflowY="scroll"
         scrollSnapType="y mandatory"
+        css={{
+            '::-webkit-scrollbar': {
+                width: 0,
+                height: 0,
+                display: 'none',
+            },
+            '::-moz-scrollbar': {
+                width: 0,
+                height: 0,
+                display: 'none',
+            },
+        }}
     >
         <Flex height="100%" width="100vw" flexDirection="column" alignItems="center">
             {Array(10).fill(10).map((_, i) => (
