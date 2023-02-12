@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import { Flex, FlexProps } from '@chakra-ui/react'
+import {Box, Flex, FlexProps} from '@chakra-ui/react'
 
 export const VideoComponent = (props: FlexProps) => {
     const videoRef = useRef<HTMLVideoElement>(null);
@@ -44,16 +44,16 @@ export const VideoComponent = (props: FlexProps) => {
     };
 
     return (
-        <Flex justifyContent="center" width="100%" height="100vh" background="#77A59B">
+        <Flex justifyContent="center" width="100%" height="100vh" maxHeight="-webkit-fill-available" background="#77A59B">
             <video
                 loop
                 playsInline
                 muted
                 onClick={handlePlayPause}
-                style={{ cursor: 'pointer' }}
+                style={{ cursor: 'pointer', height: '100%' }}
                 ref={videoRef}
                 src="https://assets.mixkit.co/videos/preview/mixkit-waves-in-the-water-1164-large.mp4"
-                height="100%"
+                height="-webkit-fill-available"
             />
         </Flex>
     );
