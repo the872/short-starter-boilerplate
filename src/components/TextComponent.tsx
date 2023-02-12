@@ -1,53 +1,35 @@
-import {Box, Flex, FlexProps, Heading, Image, Text} from '@chakra-ui/react'
+import {Box, Flex, FlexProps, Heading, Text, Tooltip} from '@chakra-ui/react'
+import PublicIcon from '@mui/icons-material/Public'
 
 export const TextComponent = (props: FlexProps) => (
     <Box height="100vh" maxHeight="-webkit-fill-available" background="#9B76AA" width="100vw">
-        <Heading p="1rem" borderBottomRadius="1rem" fontSize="xl" background="#fff" color="#000" textAlign="center">Article Title</Heading>
-        <Flex justifyContent="center" maxHeight="calc(100% - 8rem)">
-            <Text display="block" maxWidth={900} p="1rem" m="1rem" borderRadius="1rem" background="#fff" color="#000" textAlign="start" overflow="scroll">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-                molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-                numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-                optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis
-                obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam
-                nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit,
-                tenetur error, harum nesciunt ipsum debitis quas aliquid. Reprehenderit,
-                quia. Quo neque error repudiandae fuga? Ipsa laudantium molestias eos
-                sapiente officiis modi at sunt excepturi expedita sint? Sed quibusdam
-                recusandae alias error harum maxime adipisci amet laborum. Perspiciatis
-                minima nesciunt dolorem! Officiis iure rerum voluptates a cumque velit
-                quibusdam sed amet tempora. Sit laborum ab, eius fugit doloribus tenetur
-                fugiat, temporibus enim commodi iusto libero magni deleniti quod quam
-                consequuntur! Commodi minima excepturi repudiandae velit hic maxime
-                doloremque. Quaerat provident commodi consectetur veniam similique ad
-                earum omnis ipsum saepe, voluptas, hic voluptates pariatur est explicabo
-                fugiat, dolorum eligendi quam cupiditate excepturi mollitia maiores labore
-                suscipit quas? Nulla, placeat. Voluptatem quaerat non architecto ab laudantium
-                modi minima sunt esse temporibus sint culpa, recusandae aliquam numquam
-                totam ratione voluptas quod exercitationem fuga. Possimus quis earum veniam
-                quasi aliquam eligendi, placeat qui corporis!
-
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-                molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-                numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-                optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis
-                obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam
-                nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit,
-                tenetur error, harum nesciunt ipsum debitis quas aliquid. Reprehenderit,
-                quia. Quo neque error repudiandae fuga? Ipsa laudantium molestias eos
-                sapiente officiis modi at sunt excepturi expedita sint? Sed quibusdam
-                recusandae alias error harum maxime adipisci amet laborum. Perspiciatis
-                minima nesciunt dolorem! Officiis iure rerum voluptates a cumque velit
-                quibusdam sed amet tempora. Sit laborum ab, eius fugit doloribus tenetur
-                fugiat, temporibus enim commodi iusto libero magni deleniti quod quam
-                consequuntur! Commodi minima excepturi repudiandae velit hic maxime
-                doloremque. Quaerat provident commodi consectetur veniam similique ad
-                earum omnis ipsum saepe, voluptas, hic voluptates pariatur est explicabo
-                fugiat, dolorum eligendi quam cupiditate excepturi mollitia maiores labore
-                suscipit quas? Nulla, placeat. Voluptatem quaerat non architecto ab laudantium
-                modi minima sunt esse temporibus sint culpa, recusandae aliquam numquam
-                totam ratione voluptas quod exercitationem fuga. Possimus quis earum veniam
-                quasi aliquam eligendi, placeat qui corporis!
+        <Flex justifyContent="center">
+            <Box minWidth="50%" height={84} maxWidth={900} background="#77A59B" padding={{ xl: "1rem", base: "0.75rem" }} borderBottomRadius="1rem" display="flex" alignItems="center">
+                <Heading width="calc(100vw - 10rem)" maxWidth={900} fontSize={{ xl: "xl", base: "md" }} color="#000" textAlign="center">
+                    <Tooltip label="World News">
+                        <a style={{ textDecoration: 'underline' }} target="_blank" href="https://www.reuters.com/world/us/us-still-gives-no-details-about-alaska-ufo-new-object-seen-over-canada-2023-02-11/">U.S. fighter jet shoots down unidentified cylindrical object over Canada</a>
+                    </Tooltip>
+                </Heading>
+            </Box>
+        </Flex>
+        <Flex justifyContent="center" height="calc(100% - 9.5rem)">
+            <Text
+                fontSize={{ xl: "xl", base: "md" }}
+                lineHeight={{ xl: "3rem", base: "2rem" }}
+                css={{
+                    '::-webkit-scrollbar': {
+                        width: 0,
+                        height: 0,
+                        display: 'none',
+                    },
+                    '::-moz-scrollbar': {
+                        width: 0,
+                        height: 0,
+                        display: 'none',
+                    },
+                }}
+                display="block" maxWidth={900} p="1rem" m="1rem" borderRadius="1rem" background="#ffffff75" color="#000" textAlign="start" overflow="scroll">
+                A US F-22 fighter jet has shot down a cylindrical object in Canadian airspace on Saturday, the second such incident in two days. The US military also scrambled fighter jets to investigate a radar anomaly in Montana. Canadian Prime Minister Justin Trudeau announced the shootdown in the northern Yukon territory, adding that Canadian forces would recover and analyze the wreckage. The Canadian Defense Minister declined to speculate on the origin of the object but said it posed a risk to civilian air traffic and was shot down using an AIM 9X missile. The Pentagon said that the NORAD detected the object over Alaska on Friday and U.S. fighter jets monitored it as it crossed into Canadian airspace, where Canadian CF-18 and CP-140 aircraft joined the formation. The U.S. President Joe Biden authorized the U.S. military to work with Canada to take down the high-altitude craft.
             </Text>
         </Flex>
     </Box>

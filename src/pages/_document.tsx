@@ -5,8 +5,7 @@ export default class Document extends NextDocument {
   render() {
     return (
       <Html>
-        <Head>
-            <title>Generic Page</title>
+        <Head title="Generic Page">
             <link rel="shortcut icon" href="https://iili.io/HEwxs7n.png" />
             <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
         </Head>
