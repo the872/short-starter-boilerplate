@@ -1,8 +1,9 @@
 import React, { useRef, useEffect } from 'react';
-import {Box, Flex, FlexProps} from '@chakra-ui/react'
+import {Flex, FlexProps} from '@chakra-ui/react'
 
 export const VideoComponent = (props: FlexProps) => {
     const videoRef = useRef<HTMLVideoElement>(null);
+    const [isMuted, setIsMuted] = React.useState(true);
 
     useEffect(() => {
         let observer: IntersectionObserver | null = null;
@@ -32,6 +33,12 @@ export const VideoComponent = (props: FlexProps) => {
         };
     }, []);
 
+    const handleDoubleClick = () => {
+        if (videoRef.current) {
+            setIsMuted(!isMuted);
+            videoRef.current.muted = !isMuted;
+        }
+    };
 
     const handlePlayPause = () => {
         if (videoRef.current) {
@@ -48,13 +55,14 @@ export const VideoComponent = (props: FlexProps) => {
             <video
                 loop
                 playsInline
-                muted
                 onClick={handlePlayPause}
+                onDoubleClick={handleDoubleClick}
                 style={{ cursor: 'pointer', height: '100%', width: '100vw'}}
                 ref={videoRef}
                 src="https://assets.mixkit.co/videos/preview/mixkit-waves-in-the-water-1164-large.mp4"
                 height="-webkit-fill-available"
                 width="100vw"
+                muted={isMuted}
             />
         </Flex>
     );
