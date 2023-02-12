@@ -47,6 +47,7 @@ export const VideoComponent = (props: FlexProps) => {
         <Flex justifyContent="center" width="100%" height="100vh" background="#77A59B">
             <video
                 loop
+                playsInline
                 muted
                 onClick={handlePlayPause}
                 style={{ cursor: 'pointer' }}

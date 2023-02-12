@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import {useState, useEffect, useCallback} from 'react';
 import {Box, Flex, Image} from "@chakra-ui/react";
 import {VideoComponent} from "./VideoComponent";
 import {TextComponent} from "./TextComponent";
@@ -8,28 +8,25 @@ export const Scroller = ({ title }: { title: string }) => {
     const [data, setData] = useState(Array(10).fill(10));
     const [loading, setLoading] = useState(false);
 
+    const onScroll = useCallback(event => {
+        if (loading) return;
+        setLoading(true);
+
+        // Load more data
+        setTimeout(() => {
+            setData([...Array(data.length + 1).fill(data.length + 1)]);
+            setLoading(false);
+        }, 10);
+    }, []);
+
     useEffect(() => {
-        const handleScroll = () => {
-            // Check if the user has scrolled to the bottom of the page
-            // if (window.innerHeight + document.documentElement.scrollTop - 500> document.documentElement.offsetHeight) return;
-
-            // Avoid loading data multiple times
-            if (loading) return;
-            setLoading(true);
-
-            // Load more data
-            setTimeout(() => {
-                setData([...Array(data.length + 1).fill(data.length + 1)]);
-                setLoading(false);
-            }, 10);
-        };
-
-        window.addEventListener('scroll', handleScroll);
-
+        //add eventlistener to window
+        window.addEventListener("scroll", onScroll, { passive: true });
+        // remove event on unmount to prevent a memory leak with the cleanup
         return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, [data, loading]);
+            window.removeEventListener("scroll", onScroll);
+        }
+    }, []);
 
     return (
         <Flex
@@ -61,6 +58,7 @@ export const Scroller = ({ title }: { title: string }) => {
                             key={i}
                             position="relative"
                             scrollSnapAlign="start"
+                            scrollSnapStop="always"
                             height="100%"
                             width="100%"
                         >
