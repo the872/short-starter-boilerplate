@@ -50,10 +50,11 @@ export const VideoComponent = (props: FlexProps) => {
                 playsInline
                 muted
                 onClick={handlePlayPause}
-                style={{ cursor: 'pointer', height: '100%' }}
+                style={{ cursor: 'pointer', height: '100%', width: '100%'}}
                 ref={videoRef}
                 src="https://assets.mixkit.co/videos/preview/mixkit-waves-in-the-water-1164-large.mp4"
                 height="-webkit-fill-available"
+                width="-webkit-fill-available"
             />
         </Flex>
     );
