@@ -5,6 +5,7 @@ import {TextComponent} from "./TextComponent";
 import {BottomButtons} from "./BottomButtons";
 
 export const Scroller = ({ title }: { title: string }) => {
+    const [mainClick, setMainClick] = useState(false);
     const [data, setData] = useState(Array(10).fill(10));
     const [loading, setLoading] = useState(false);
 
@@ -51,7 +52,7 @@ export const Scroller = ({ title }: { title: string }) => {
                 },
             }}
         >
-            <Flex height="100%" width="100vw" flexDirection="column" alignItems="center">
+            <Flex height="100%" width="100vw" flexDirection="column" alignItems="center" style={{ display: !mainClick && 'none' }}>
                 {data.map((_, i) => (
                     <>
                         <Box
@@ -68,14 +69,19 @@ export const Scroller = ({ title }: { title: string }) => {
                     </>
                 ))}
             </Flex>
-            <Box
+            <Flex
+                onClick={() => setMainClick(true)}
                 css={{
                     position: 'absolute',
-                    top: '1rem',
-                    left: '1rem',
-                    height: '3rem',
-                    width: '3rem',
-                    animation: 'rotation 1s linear',
+                    top: mainClick ? '1rem' : 0,
+                    left: mainClick ? '1rem' : 0,
+                    height: mainClick ? '3rem' : '100vh',
+                    justifyContent: !mainClick && 'center',
+                    alignItems: !mainClick && 'center',
+                    cursor: !mainClick && 'pointer',
+                    width: mainClick ? '3rem' : '100vw',
+                    background: !mainClick && '#76AB9B',
+                    animation: mainClick && 'rotation 1s linear',
                     '@keyframes rotation': {
                         from: {
                             top: 'calc(50% - 5rem)',
@@ -93,8 +99,10 @@ export const Scroller = ({ title }: { title: string }) => {
                 }}
             >
                 <Image
+                    height={!mainClick && "10rem"}
+                    width={!mainClick && "10rem"}
                     src="https://iili.io/HEwxs7n.png" />
-            </Box>
+            </Flex>
         </Flex>
     );
 };

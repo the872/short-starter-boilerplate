@@ -12,12 +12,16 @@ export const VideoComponent = (props: FlexProps) => {
         let observer: IntersectionObserver | null = null;
 
         if (videoRef.current) {
-            observer = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
+            observer = new IntersectionObserver((entries, index) => {
+                entries.forEach((entry) => {
                     if (entry.isIntersecting) {
                         videoRef.current!.play();
+                        setIsMuted(false);
+                        videoRef.current.muted = false;
                     } else {
                         videoRef.current!.pause();
+                        setIsMuted(true);
+                        videoRef.current.muted = true;
                     }
                 });
             });
