@@ -33,12 +33,12 @@ export const VideoComponent = (props: FlexProps) => {
         };
     }, []);
 
-    // const handleDoubleClick = () => {
-    //     if (videoRef.current) {
-    //         setIsMuted(!isMuted);
-    //         videoRef.current.muted = !isMuted;
-    //     }
-    // };
+    const handleDoubleClick = () => {
+        if (videoRef.current) {
+            setIsMuted(!isMuted);
+            videoRef.current.muted = !isMuted;
+        }
+    };
 
     const handlePlayPause = () => {
         if (videoRef.current) {
@@ -50,12 +50,27 @@ export const VideoComponent = (props: FlexProps) => {
         }
     };
 
+    const handleTouchEnd = (e: React.TouchEvent) => {
+        e.persist();
+        let touchEndTime = Date.now();
+
+        setTimeout(() => {
+            if (Date.now() - touchEndTime <= 300) {
+                handlePlayPause();
+            } else {
+                handleDoubleClick();
+            }
+        }, 300);
+    };
+
     return (
         <Flex justifyContent="center" width="100%" height="100vh" maxHeight="-webkit-fill-available" background="#77A59B">
             <video
                 loop
                 playsInline
                 onClick={handlePlayPause}
+                onDoubleClick={handleDoubleClick}
+                onTouchEnd={handleTouchEnd}
                 style={{ cursor: 'pointer', height: '100%', width: '100vw'}}
                 ref={videoRef}
                 src="https://assets.mixkit.co/videos/preview/mixkit-waves-in-the-water-1164-large.mp4"
@@ -63,6 +78,7 @@ export const VideoComponent = (props: FlexProps) => {
                 width="100vw"
                 muted={isMuted}
             />
+            <div style={{ display: !isMuted && 'none',background: 'white', padding: '1rem', borderRadius: '1rem', position: 'absolute', top: '2rem', right: '2rem', color: '#000000' }}>{isMuted && 'Muted'}</div>
         </Flex>
     );
 }
