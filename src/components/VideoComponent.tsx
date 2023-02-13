@@ -33,12 +33,12 @@ export const VideoComponent = (props: FlexProps) => {
         };
     }, []);
 
-    const handleDoubleClick = () => {
-        if (videoRef.current) {
-            setIsMuted(!isMuted);
-            videoRef.current.muted = !isMuted;
-        }
-    };
+    // const handleDoubleClick = () => {
+    //     if (videoRef.current) {
+    //         setIsMuted(!isMuted);
+    //         videoRef.current.muted = !isMuted;
+    //     }
+    // };
 
     const handlePlayPause = () => {
         if (videoRef.current) {
@@ -56,7 +56,6 @@ export const VideoComponent = (props: FlexProps) => {
                 loop
                 playsInline
                 onClick={handlePlayPause}
-                onDoubleClick={handleDoubleClick}
                 style={{ cursor: 'pointer', height: '100%', width: '100vw'}}
                 ref={videoRef}
                 src="https://assets.mixkit.co/videos/preview/mixkit-waves-in-the-water-1164-large.mp4"
