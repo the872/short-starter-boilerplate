@@ -76,6 +76,7 @@ export const Scroller = ({ title }: { title: string }) => {
                     top: mainClick ? '1rem' : 0,
                     left: mainClick ? '1rem' : 0,
                     height: mainClick ? '3rem' : '100vh',
+                    maxHeight: !mainClick && '-webkit-fill-available',
                     justifyContent: !mainClick && 'center',
                     alignItems: !mainClick && 'center',
                     cursor: !mainClick && 'pointer',
