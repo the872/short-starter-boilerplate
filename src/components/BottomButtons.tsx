@@ -4,7 +4,7 @@ import ThumbUpIcon from '@mui/icons-material/ThumbUp'
 import ThumbDownIcon from '@mui/icons-material/ThumbDown'
 import ReplyIcon from '@mui/icons-material/Reply'
 
-export const SideButtons = () => {
+export const BottomButtons = () => {
   return (
       <Flex position="relative" justifyContent="space-evenly" width="20rem" bottom="4.5rem" marginBottom="-3.5rem">
         <IconButton

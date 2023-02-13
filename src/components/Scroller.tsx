@@ -2,7 +2,7 @@ import {useState, useEffect, useCallback} from 'react';
 import {Box, Flex, Image} from "@chakra-ui/react";
 import {VideoComponent} from "./VideoComponent";
 import {TextComponent} from "./TextComponent";
-import {SideButtons} from "./SideButtons";
+import {BottomButtons} from "./BottomButtons";
 
 export const Scroller = ({ title }: { title: string }) => {
     const [data, setData] = useState(Array(10).fill(10));
@@ -64,7 +64,7 @@ export const Scroller = ({ title }: { title: string }) => {
                         >
                             {i % 2 === 0 ? <VideoComponent /> : <TextComponent />}
                         </Box>
-                        <SideButtons />
+                        <BottomButtons />
                     </>
                 ))}
             </Flex>
