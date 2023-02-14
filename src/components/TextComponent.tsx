@@ -32,7 +32,7 @@ export const TextComponent = (props: FlexProps) => {
                     setLoading(false);
                     clearInterval(intervalId);
                 }
-            }, 5);
+            }, 66);
         }
         return () => {
             clearInterval(intervalId);
