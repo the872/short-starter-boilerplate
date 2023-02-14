@@ -42,7 +42,7 @@ export const TextComponent = (props: FlexProps) => {
     return (
         <Box height="100vh" background="#9B76AA" width="100vw">
             <Flex justifyContent="center">
-                <Box minWidth="50%" height={84} maxWidth={900} background="#ffffff75" padding={{ xl: "1rem", base: "0.75rem" }} borderBottomRadius="1rem" display="flex" alignItems="center">
+                <Box minWidth="50%" height={84} maxWidth={900} background="#ffffff75" padding={{ xl: "1rem", base: "0.75rem" }} marginTop="1rem" borderRadius="1rem" display="flex" alignItems="center">
                     <Heading width="calc(100vw - 10rem)" maxWidth={900} fontSize={{ xl: "xl", base: "md" }} color="#000" textAlign="center">
                         <Tooltip label="World News">
                         <a style={{ textDecoration: 'underline' }} target="_blank" href="https://www.reuters.com/world/us/us-still-gives-no-details-about-alaska-ufo-new-object-seen-over-canada-2023-02-11/">U.S. fighter jet shoots down unidentified cylindrical object over Canada</a>
