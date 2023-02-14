@@ -42,14 +42,14 @@ export const TextComponent = (props: FlexProps) => {
         <Box height="100vh" background="#9B76AA" width="100vw">
             <Flex justifyContent="center">
                 <Box minWidth="50%" height={84} maxWidth={900} background="#77A59B" padding={{ xl: "1rem", base: "0.75rem" }} borderBottomRadius="1rem" display="flex" alignItems="center">
-                    <Heading width="calc(100vh - 200px)" maxWidth={900} fontSize={{ xl: "xl", base: "md" }} color="#000" textAlign="center">
+                    <Heading width="calc(100vw - 10rem)" maxWidth={900} fontSize={{ xl: "xl", base: "md" }} color="#000" textAlign="center">
                         <Tooltip label="World News">
                         <a style={{ textDecoration: 'underline' }} target="_blank" href="https://www.reuters.com/world/us/us-still-gives-no-details-about-alaska-ufo-new-object-seen-over-canada-2023-02-11/">U.S. fighter jet shoots down unidentified cylindrical object over Canada</a>
                     </Tooltip>
                 </Heading>
             </Box>
         </Flex>
-        <Flex justifyContent="center" height="calc(100% - 9.5rem)">
+        <Flex justifyContent="center" height="calc(100% - 200px)">
             <Text
                 ref={textRef}
                 fontSize={{ xl: "xl", base: "md" }}
