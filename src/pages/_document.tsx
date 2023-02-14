@@ -11,7 +11,7 @@ export default class Document extends NextDocument {
             <title>Generic Page</title>
             <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
         </Head>
-        <body>
+        <body style={{ background: '#77AC9B' }}>
           {/* Make Color mode to persists when you refresh the page. */}
           <ColorModeScript />
           <Main />
