@@ -6,7 +6,7 @@ import ReplyIcon from '@mui/icons-material/Reply'
 
 export const BottomButtons = () => {
   return (
-      <Flex position="relative" justifyContent="space-evenly" width="20rem" bottom="5rem" marginBottom="-3.5rem">
+      <Flex position="relative" justifyContent="space-evenly" width="20rem" bottom="5.5rem" marginBottom="-3.5rem">
         <IconButton
             height="3.5rem"
             width="3.5rem"
