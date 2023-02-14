@@ -1,0 +1,15 @@
+{
+  "short_name": "Page",
+  "name": "Generic Page",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#77AC9B",
+  "theme_color": "#77AC9B",
+  "icons": [
+    {
+      "src": "https://iili.io/HEwxs7n.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

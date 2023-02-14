@@ -10,6 +10,7 @@ export default class Document extends NextDocument {
             <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
             <title>Generic Page</title>
             <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+            <link rel="manifest" href="/manifest.json" />
         </Head>
         <body style={{ background: '#77AC9B' }}>
           {/* Make Color mode to persists when you refresh the page. */}
