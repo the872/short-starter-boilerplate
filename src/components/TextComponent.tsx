@@ -49,7 +49,7 @@ export const TextComponent = (props: FlexProps) => {
                 </Heading>
             </Box>
         </Flex>
-        <Flex justifyContent="center" height="calc(100% - 200px)">
+        <Flex justifyContent="center" height="calc(100% - 216px)">
             <Text
                 ref={textRef}
                 fontSize={{ xl: "xl", base: "md" }}
