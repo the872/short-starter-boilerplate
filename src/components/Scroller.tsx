@@ -82,12 +82,12 @@ export const Scroller = ({ title }: { title: string }) => {
                     alignItems: !mainClick && 'center',
                     cursor: !mainClick && 'pointer',
                     width: mainClick ? '3rem' : '100vw',
-                    background: !mainClick && '#76AB9B',
+                    background: !mainClick && '#9B76AA',
                     animation: mainClick && 'rotation 1s linear',
                     flexDirection: 'column',
                     '@keyframes rotation': {
                         from: {
-                            top: 'calc(50% - 7.5rem)',
+                            top: 'calc(50% - 5rem)',
                             left: 'calc(50% - 5rem)',
                             height: '10rem',
                             width: '10rem',

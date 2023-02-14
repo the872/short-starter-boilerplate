@@ -66,7 +66,7 @@ export const VideoComponent = (props: FlexProps) => {
                 style={{
                     height: '100%',
                     width: '100%',
-                    objectFit: 'cover'
+                    objectFit: 'cover',
                 }}
                 ref={videoRef}
                 src="https://assets.mixkit.co/videos/preview/mixkit-waves-in-the-water-1164-large.mp4"
