@@ -12,14 +12,15 @@ export const VideoComponent = (props: FlexProps) => {
         let observer: IntersectionObserver | null = null;
 
         if (videoRef.current) {
-            observer = new IntersectionObserver((entries, index) => {
+            observer = new IntersectionObserver((entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
-                        videoRef.current!.play();
+                        videoRef.current.src = videoRef.current.dataset.src!;
+                        videoRef.current.play();
                         setIsMuted(false);
                         videoRef.current.muted = false;
                     } else {
-                        videoRef.current!.pause();
+                        videoRef.current.pause();
                         setIsMuted(true);
                         videoRef.current.muted = true;
                     }
@@ -29,7 +30,7 @@ export const VideoComponent = (props: FlexProps) => {
             observer.observe(videoRef.current);
 
             if (videoRef.current!.offsetParent !== null) {
-                videoRef.current!.play();
+                videoRef.current!.src = videoRef.current.dataset.src!;
             }
         }
 
@@ -61,6 +62,7 @@ export const VideoComponent = (props: FlexProps) => {
         <Flex justifyContent="center" width="100%" height="100vh" background="#77A59B">
             <video
                 loop
+                muted
                 playsInline
                 onClick={handlePlayPause}
                 style={{
@@ -69,10 +71,9 @@ export const VideoComponent = (props: FlexProps) => {
                     objectFit: 'cover',
                 }}
                 ref={videoRef}
-                src="https://assets.mixkit.co/videos/preview/mixkit-waves-in-the-water-1164-large.mp4"
+                data-src="https://assets.mixkit.co/videos/preview/mixkit-waves-in-the-water-1164-large.mp4"
                 height="-webkit-fill-available"
                 width="100vw"
-                muted={isMuted}
             />
             <IconButton
                 height="3.5rem"

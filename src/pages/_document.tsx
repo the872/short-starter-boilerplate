@@ -4,7 +4,7 @@ import { ColorModeScript } from '@chakra-ui/react'
 export default class Document extends NextDocument {
     render() {
         return (
-            <Html>
+            <Html lang="en">
                 <Head>
                     <link rel="shortcut icon" href="https://iili.io/HEwxs7n.png" />
                     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
@@ -12,6 +12,9 @@ export default class Document extends NextDocument {
                     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
                     <meta content='yes' name='apple-mobile-web-app-capable'/>
                     <meta content='yes' name='mobile-web-app-capable'/>
+                    <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
+                    <meta name="theme-color" content="#9B76AA" />
+                    <meta name="description" content="Generic news, easy to read" />
                     <link rel="manifest" href="/manifest.json" />
                 </Head>
                 <body style={{ background: '#77A59B' }}>

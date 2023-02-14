@@ -104,6 +104,7 @@ export const Scroller = ({ title }: { title: string }) => {
                 <Image
                     height={!mainClick && "10rem"}
                     width={!mainClick && "10rem"}
+                    alt="Generic Page"
                     src="https://iili.io/HEwxs7n.png" />
             </Flex>
         </Flex>

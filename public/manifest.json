@@ -4,12 +4,13 @@
   "background_color": "#77A59B",
   "theme_color": "#9B76AA",
   "orientation": "portrait",
-  "description" : "Generic news, easy to read ",
+  "description" : "Generic news, easy to read",
   "icons": [
     {
       "src": "/icons/icon-192x192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
       "src": "/icons/icon-384x384.png",
