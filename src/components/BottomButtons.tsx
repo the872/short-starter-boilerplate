@@ -8,10 +8,36 @@ export const BottomButtons = () => {
 
     const handleShareClick = async () => {
         try {
-            await navigator.share({
-                title: 'Shared from my website',
-                url: window.location.href,
-            })
+            const url = window.location.href;
+            if (navigator.share) {
+                await navigator.share({
+                    title: 'Shared from my website',
+                    url: url,
+                })
+            } else {
+                const tempInput = document.createElement('input');
+                tempInput.setAttribute('style','position: absolute; left: -1000px; top: -1000px');
+                tempInput.value = url;
+                document.body.appendChild(tempInput);
+                tempInput.select();
+                document.execCommand('copy');
+                document.body.removeChild(tempInput);
+                const popup = document.createElement('div')
+                popup.innerText = 'Link copied!'
+                popup.style.position = 'fixed'
+                popup.style.bottom = '2rem'
+                popup.style.right = '1rem'
+                popup.style.backgroundColor = '#fff'
+                popup.style.fontWeight = '900'
+                popup.style.color = '#9B76AA'
+                popup.style.border = '3px solid #9B76AA'
+                popup.style.padding = '0.5rem 1rem'
+                popup.style.borderRadius = '1rem'
+                document.body.appendChild(popup)
+                setTimeout(() => {
+                    document.body.removeChild(popup)
+                }, 3000)
+            }
         } catch (error) {
             console.error('Error sharing:', error)
         }
