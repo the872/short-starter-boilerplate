@@ -71,6 +71,7 @@ export const Scroller = ({ title }: { title: string }) => {
                 ))}
             </Flex>
             <Flex
+                onClick={() => setMainClick(true)}
                 css={{
                     position: 'absolute',
                     top: mainClick ? '1rem' : 0,
@@ -86,7 +87,7 @@ export const Scroller = ({ title }: { title: string }) => {
                     flexDirection: 'column',
                     '@keyframes rotation': {
                         from: {
-                            top: 'calc(50% - 5rem)',
+                            top: 'calc(50% - 7.5rem)',
                             left: 'calc(50% - 5rem)',
                             height: '10rem',
                             width: '10rem',
@@ -101,7 +102,6 @@ export const Scroller = ({ title }: { title: string }) => {
                 }}
             >
                 <Image
-                    onClick={() => setMainClick(true)}
                     height={!mainClick && "10rem"}
                     width={!mainClick && "10rem"}
                     src="https://iili.io/HEwxs7n.png" />
