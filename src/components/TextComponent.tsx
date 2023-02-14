@@ -27,11 +27,12 @@ export const TextComponent = (props: FlexProps) => {
         if (loading && isInView) {
             intervalId = setInterval(() => {
                 setDisplayedText(text.slice(0, displayedText.length + 1));
+                textRef.current.scrollTop = textRef.current.scrollHeight;
                 if (displayedText.length === text.length) {
                     setLoading(false);
                     clearInterval(intervalId);
                 }
-            }, 40);
+            }, 5);
         }
         return () => {
             clearInterval(intervalId);
@@ -49,7 +50,7 @@ export const TextComponent = (props: FlexProps) => {
                 </Heading>
             </Box>
         </Flex>
-        <Flex justifyContent="center" height="calc(100% - 300px)">
+        <Flex justifyContent="center" height="calc(100% - 320px)">
             <Text
                 ref={textRef}
                 fontSize={{ xl: "xl", base: "md" }}
