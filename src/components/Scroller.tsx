@@ -3,6 +3,7 @@ import {Box, Flex, Image} from "@chakra-ui/react";
 import {VideoComponent} from "./VideoComponent";
 import {TextComponent} from "./TextComponent";
 import {BottomButtons} from "./BottomButtons";
+import InstallPWAButton from "./InstallPWAButton";
 
 export const Scroller = ({ title }: { title: string }) => {
     const [mainClick, setMainClick] = useState(false);
@@ -70,7 +71,6 @@ export const Scroller = ({ title }: { title: string }) => {
                 ))}
             </Flex>
             <Flex
-                onClick={() => setMainClick(true)}
                 css={{
                     position: 'absolute',
                     top: mainClick ? '1rem' : 0,
@@ -83,6 +83,7 @@ export const Scroller = ({ title }: { title: string }) => {
                     width: mainClick ? '3rem' : '100vw',
                     background: !mainClick && '#76AB9B',
                     animation: mainClick && 'rotation 1s linear',
+                    flexDirection: 'column',
                     '@keyframes rotation': {
                         from: {
                             top: 'calc(50% - 5rem)',
@@ -100,9 +101,11 @@ export const Scroller = ({ title }: { title: string }) => {
                 }}
             >
                 <Image
+                    onClick={() => setMainClick(true)}
                     height={!mainClick && "10rem"}
                     width={!mainClick && "10rem"}
                     src="https://iili.io/HEwxs7n.png" />
+                <InstallPWAButton />
             </Flex>
         </Flex>
     );
