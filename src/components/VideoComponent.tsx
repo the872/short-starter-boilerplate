@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import {Flex, FlexProps, IconButton} from '@chakra-ui/react'
+import { Flex, FlexProps, IconButton } from '@chakra-ui/react';
 import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 import Mute from '@mui/icons-material/VolumeMute';
 import Unmute from '@mui/icons-material/VolumeUp';
@@ -63,7 +63,11 @@ export const VideoComponent = (props: FlexProps) => {
                 loop
                 playsInline
                 onClick={handlePlayPause}
-                style={{ cursor: 'pointer', height: '100%', width: '100vw'}}
+                style={{
+                    height: '100%',
+                    width: '100%',
+                    objectFit: 'cover'
+                }}
                 ref={videoRef}
                 src="https://assets.mixkit.co/videos/preview/mixkit-waves-in-the-water-1164-large.mp4"
                 height="-webkit-fill-available"
@@ -81,4 +85,4 @@ export const VideoComponent = (props: FlexProps) => {
             />
         </Flex>
     );
-}
+};

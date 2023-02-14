@@ -40,6 +40,7 @@ export const Scroller = ({ title }: { title: string }) => {
             overflowY="scroll"
             scrollSnapType="y mandatory"
             css={{
+                padding: 'env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)',
                 '::-webkit-scrollbar': {
                     width: 0,
                     height: 0,

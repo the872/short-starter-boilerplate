@@ -9,6 +9,7 @@ export default class Document extends NextDocument {
             <link rel="shortcut icon" href="https://iili.io/HEwxs7n.png" />
             <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
             <title>Generic Page</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
         </Head>
         <body>
           {/* Make Color mode to persists when you refresh the page. */}
