@@ -1,6 +1,7 @@
 {
   "name": "Generic Page",
   "short_name": "Generic Page",
+  "id": "/",
   "background_color": "#77A59B",
   "theme_color": "#9B76AA",
   "orientation": "portrait",
