@@ -3,6 +3,7 @@ import { Flex, FlexProps, IconButton } from '@chakra-ui/react';
 import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 import Mute from '@mui/icons-material/VolumeMute';
 import Unmute from '@mui/icons-material/VolumeUp';
+import ThumbDownIcon from "@mui/icons-material/ThumbDown";
 
 export const VideoComponent = (props: FlexProps) => {
     const videoRef = useRef<HTMLVideoElement>(null);
@@ -76,13 +77,15 @@ export const VideoComponent = (props: FlexProps) => {
                 width="100vw"
             />
             <IconButton
-                height="3.5rem"
-                width="3.5rem"
-                borderRadius="5rem"
+                height="3rem"
+                width="3rem"
+                borderRadius="5px"
                 onClick={handleMuteUnmute}
+                boxShadow="inset 0px 2px 5px rgba(0, 0, 0, 0.25)"
                 icon={isMuted ? <Mute style={{ fill: '#9B76AA' }} /> : <Unmute style={{ fill: '#9B76AA' }} />}
-                aria-label="Like"
-                style={{ background: 'white', position: 'absolute', top: '1rem', right: '1rem', color: '#000000' }}
+                aria-label={isMuted ? "Mute" : "Unmute"}
+                _hover={{ bg: '#76AB9B' }}
+                style={{ position: 'absolute', top: '1rem', right: '1rem' }}
             />
         </Flex>
     );

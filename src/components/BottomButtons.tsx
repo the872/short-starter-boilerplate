@@ -44,28 +44,34 @@ export const BottomButtons = () => {
     }
 
     return (
-        <Flex position="relative" justifyContent="space-evenly" width="20rem" bottom="5.5rem" marginBottom="-3.5rem">
+        <Flex position="relative" justifyContent="space-evenly" width="20rem" bottom="5rem" marginBottom="-3rem">
             <IconButton
-                height="3.5rem"
-                width="3.5rem"
-                borderRadius="5rem"
+                height="3rem"
+                width="3rem"
+                borderRadius="5px"
+                boxShadow="inset 0px 2px 5px rgba(0, 0, 0, 0.25)"
                 icon={<ThumbUpIcon style={{ fill: '#9B76AA' }} />}
                 aria-label="Like"
+                _hover={{ bg: '#76AB9B' }}
             />
             <IconButton
-                height="3.5rem"
-                width="3.5rem"
-                borderRadius="5rem"
+                height="3rem"
+                width="3rem"
+                borderRadius="5px"
+                boxShadow="inset 0px 2px 5px rgba(0, 0, 0, 0.25)"
                 icon={<ThumbDownIcon style={{ fill: '#9B76AA' }} />}
                 aria-label="Dislike"
+                _hover={{ bg: '#76AB9B' }}
             />
             <IconButton
-                height="3.5rem"
-                width="3.5rem"
-                borderRadius="5rem"
+                height="3rem"
+                width="3rem"
+                borderRadius="5px"
+                boxShadow="inset 0px 2px 5px rgba(0, 0, 0, 0.25)"
                 transform="scaleX(-1)"
                 icon={<ReplyIcon style={{ fill: '#9B76AA' }} />}
                 aria-label="Share"
+                _hover={{ bg: '#76AB9B' }}
                 onClick={handleShareClick}
             />
         </Flex>
