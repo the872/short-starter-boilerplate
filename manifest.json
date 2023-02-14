@@ -5,6 +5,7 @@
   "theme_color": "#77AC9B",
   "orientation": "portrait",
   "description" : "Generic news, easy to read ",
+  "scope" : "/public",
   "icons": [
     {
       "src": "/icons/icon-72x72.png",
