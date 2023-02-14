@@ -105,7 +105,9 @@ export const Scroller = ({ title }: { title: string }) => {
                     height={!mainClick && "10rem"}
                     width={!mainClick && "10rem"}
                     src="https://iili.io/HEwxs7n.png" />
-                <InstallPWAButton />
+                <Flex style={{ display: mainClick && 'none' }}>
+                    <InstallPWAButton />
+                </Flex>
             </Flex>
         </Flex>
     );
