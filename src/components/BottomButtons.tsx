@@ -71,7 +71,6 @@ export const BottomButtons = () => {
                 transform="scaleX(-1)"
                 icon={<ReplyIcon style={{ fill: '#9B76AA' }} />}
                 aria-label="Share"
-                _hover={{ bg: '#76AB9B' }}
                 onClick={handleShareClick}
             />
         </Flex>

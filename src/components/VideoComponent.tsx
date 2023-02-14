@@ -84,7 +84,6 @@ export const VideoComponent = (props: FlexProps) => {
                 boxShadow="inset 0px 2px 5px rgba(0, 0, 0, 0.25)"
                 icon={isMuted ? <Mute style={{ fill: '#9B76AA' }} /> : <Unmute style={{ fill: '#9B76AA' }} />}
                 aria-label={isMuted ? "Mute" : "Unmute"}
-                _hover={{ bg: '#76AB9B' }}
                 style={{ position: 'absolute', top: '1rem', right: '1rem' }}
             />
         </Flex>
