@@ -12,7 +12,7 @@ export default class Document extends NextDocument {
             <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
             <link rel="manifest" href="/manifest.json" />
         </Head>
-        <body style={{ background: '#77AC9B' }}>
+        <body style={{ background: '#77A59B' }}>
           {/* Make Color mode to persists when you refresh the page. */}
           <ColorModeScript />
           <Main />
