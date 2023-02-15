@@ -6,29 +6,33 @@ import {BottomButtons} from "./BottomButtons";
 // import InstallPWAButton from "./InstallPWAButton";
 
 export const Scroller = ({ title }: { title: string }) => {
-    const [mainClick, setMainClick] = useState(false);
     const [data, setData] = useState(Array(10).fill(10));
     const [loading, setLoading] = useState(false);
 
-    const onScroll = useCallback(event => {
-        if (loading) return;
-        setLoading(true);
-
-        // Load more data
-        setTimeout(() => {
-            setData([...Array(data.length + 1).fill(data.length + 1)]);
-            setLoading(false);
-        }, 10);
-    }, []);
-
-    useEffect(() => {
-        //add eventlistener to window
-        window.addEventListener("scroll", onScroll, { passive: true });
-        // remove event on unmount to prevent a memory leak with the cleanup
-        return () => {
-            window.removeEventListener("scroll", onScroll);
+    const handleScroll = () => {
+        if (!loading && document.documentElement.scrollHeight - document.documentElement.scrollTop === document.documentElement.clientHeight) {
+            setLoading(true);
+            console.log('called');
+            setData([...Array(data.length + 1).fill(data.length + 10)]);
+            setTimeout(() => {
+                setLoading(false);
+            }, 1000);
         }
-    }, []);
+    };
+
+    function debounce(func: Function, delay: number) {
+        let timeoutId: any;
+        return function (...args: any[]) {
+            clearTimeout(timeoutId);
+            timeoutId = setTimeout(() => func.apply(this, args), delay);
+        };
+    }
+
+    const debouncedHandleScroll = debounce(handleScroll, 10);
+
+    document.addEventListener('scroll', debouncedHandleScroll);
+
+
 
     return (
         <>
@@ -41,6 +45,7 @@ export const Scroller = ({ title }: { title: string }) => {
             bgClip="text"
             overflowY="scroll"
             scrollSnapType="y mandatory"
+            onScroll={debouncedHandleScroll}
             css={{
                 '::-webkit-scrollbar': {
                     width: 0,
@@ -75,8 +80,8 @@ export const Scroller = ({ title }: { title: string }) => {
     <Flex
         css={{
             position: 'absolute',
-            top: '1rem',
-            left: '1rem',
+            top: '3rem',
+            left: '2rem',
             height: '3rem',
             width: '3rem',
         }}

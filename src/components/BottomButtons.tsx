@@ -69,8 +69,9 @@ export const BottomButtons = () => {
                 borderRadius="5px"
                 boxShadow="inset 0px 2px 5px rgba(0, 0, 0, 0.25)"
                 transform="scaleX(-1)"
-                icon={<ReplyIcon style={{ fill: '#9B76AA' }} />}
+                icon={<ReplyIcon style={{ fill: '#9B76AA', fontSize: '2rem' }} />}
                 aria-label="Share"
+                _hover={{ bg: '#76AB9B' }}
                 onClick={handleShareClick}
             />
         </Flex>
