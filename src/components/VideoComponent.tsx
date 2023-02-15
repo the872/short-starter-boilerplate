@@ -98,7 +98,7 @@ export const VideoComponent = (props: FlexProps) => {
                 playsInline
                 onClick={handlePlayPause}
                 style={{
-                    height: isMobile && 'calc(100vh - 5rem)',
+                    height: isMobile && 'calc(100vh - 8rem)',
                     width: 'auto',
                     padding: '1rem',
                     borderRadius: '3rem',
