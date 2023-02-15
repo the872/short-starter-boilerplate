@@ -12,14 +12,24 @@ export const VideoComponent = (props: FlexProps) => {
     const [isPlaying, setIsPlaying] = useState(false);
     const [isMobile, setMobile] = useState(false);
 
-    useEffect(() => {
+    const handleResize = () => {
         const userAgent = navigator.userAgent || navigator.vendor;
 
         if (/android/i.test(userAgent)
             || /iPad|iPhone|iPod/.test(userAgent)
             || (window.innerWidth <= 800 && window.innerHeight <= 600)) {
             setMobile(true);
+            console.log('mobile')
+        } else {
+            setMobile(false);
         }
+    };
+
+    useEffect(() => {
+        handleResize();
+        window.addEventListener('resize', handleResize);
+
+        return () => window.removeEventListener('resize', handleResize);
     },[]);
 
     useEffect(() => {
@@ -98,10 +108,10 @@ export const VideoComponent = (props: FlexProps) => {
                 playsInline
                 onClick={handlePlayPause}
                 style={{
-                    height: isMobile && 'calc(100vh - 8rem)',
+                    height: isMobile && '100vh',
                     width: 'auto',
-                    padding: '1rem',
-                    borderRadius: '3rem',
+                    padding: isMobile ? '0' : '1rem',
+                    borderRadius: isMobile ? '0' : '3rem',
                     objectFit: isMobile ? 'cover' : 'contain',
                 }}
                 ref={videoRef}

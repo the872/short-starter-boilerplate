@@ -7,6 +7,25 @@ import { BottomButtons } from './BottomButtons';
 export const Scroller = ({ title }: { title: string }) => {
     const [data, setData] = useState(Array(10).fill(10));
     const [loading, setLoading] = useState(false);
+    const [isMobile, setMobile] = useState(false);
+
+    const handleResize = () => {
+        const userAgent = navigator.userAgent || navigator.vendor;
+        if (/android/i.test(userAgent)
+            || /iPad|iPhone|iPod/.test(userAgent)
+            || (window.innerWidth <= 800 && window.innerHeight <= 600)) {
+            setMobile(true);
+            console.log('mobile')
+        } else {
+            setMobile(false);
+        }
+    };
+
+    useEffect(() => {
+        handleResize();
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    },[]);
 
     const handleScroll = () => {
         if (
@@ -83,10 +102,10 @@ export const Scroller = ({ title }: { title: string }) => {
             <Flex
                 css={{
                     position: 'absolute',
-                    top: '3rem',
+                    top: !isMobile ? '2rem' : '3rem',
                     left: '2rem',
-                    height: '3rem',
-                    width: '3rem',
+                    height: !isMobile ? '5rem' : '3rem',
+                    width: !isMobile ? '5rem' : '3rem',
                 }}
             >
                 <Image alt="Generic Page" loading="lazy" src="https://iili.io/HEwxs7n.png" />
