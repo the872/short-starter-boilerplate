@@ -31,7 +31,7 @@ export const Landing = () => (
         `}
     >
         <Flex
-            justifyContent="center"
+            justifyContent="space-evenly"
             alignItems="center"
             height="100vh"
             width="100vw"
@@ -44,8 +44,9 @@ export const Landing = () => (
             flexDirection="column"
         >
             <Image
-                height="auto"
-                width="25%"
+                height="20rem"
+                width="20rem"
+                margin="5rem 0"
                 alt="Generic Page"
                 src="https://iili.io/HEwxs7n.png"
             />
