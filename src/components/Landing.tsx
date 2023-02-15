@@ -61,7 +61,7 @@ export const Landing = () => (
                     fontSize: '2rem',
                 }}
             >
-                ACCESS
+                FREE ACCESS
             </Flex>
         </Flex>
     </Link>

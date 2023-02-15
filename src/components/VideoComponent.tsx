@@ -98,12 +98,11 @@ export const VideoComponent = (props: FlexProps) => {
                 playsInline
                 onClick={handlePlayPause}
                 style={{
-                    height: '100%',
+                    height: isMobile && 'calc(100vh - 5rem)',
                     width: 'auto',
                     padding: '1rem',
-                    borderRadius: '2rem',
+                    borderRadius: '3rem',
                     objectFit: isMobile ? 'cover' : 'contain',
-                    cursor: 'pointer'
                 }}
                 ref={videoRef}
                 data-src="https://assets.mixkit.co/videos/preview/mixkit-waves-in-the-water-1164-large.mp4"
