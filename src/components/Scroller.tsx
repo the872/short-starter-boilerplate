@@ -41,7 +41,6 @@ export const Scroller = ({ title }: { title: string }) => {
             bgClip="text"
             overflowY="scroll"
             scrollSnapType="y mandatory"
-            style={{ display: !mainClick && 'none' }}
             css={{
                 '::-webkit-scrollbar': {
                     width: 0,
@@ -74,39 +73,15 @@ export const Scroller = ({ title }: { title: string }) => {
             </Flex>
         </Flex>
     <Flex
-        onClick={() => setMainClick(true)}
         css={{
             position: 'absolute',
-            top: mainClick ? '1rem' : 0,
-            left: mainClick ? '1rem' : 0,
-            height: mainClick ? '3rem' : '100vh',
-            maxHeight: !mainClick && '-webkit-fill-available',
-            justifyContent: !mainClick && 'center',
-            alignItems: !mainClick && 'center',
-            cursor: !mainClick && 'pointer',
-            width: mainClick ? '3rem' : '100vw',
-            background: !mainClick && '#9B76AA',
-            animation: mainClick && 'rotation 1s linear',
-            flexDirection: 'column',
-            '@keyframes rotation': {
-                from: {
-                    top: 'calc(50% - 5rem)',
-                    left: 'calc(50% - 5rem)',
-                    height: '10rem',
-                    width: '10rem',
-                },
-                to: {
-                    top: '1rem',
-                    left: '1rem',
-                    height: '3rem',
-                    width: '3rem',
-                },
-            },
+            top: '1rem',
+            left: '1rem',
+            height: '3rem',
+            width: '3rem',
         }}
     >
         <Image
-            height={!mainClick && "10rem"}
-            width={!mainClick && "10rem"}
             alt="Generic Page"
             src="https://iili.io/HEwxs7n.png" />
     </Flex>
