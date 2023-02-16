@@ -13,7 +13,7 @@ export default class Document extends NextDocument {
                     <meta content='yes' name='apple-mobile-web-app-capable'/>
                     <meta content='yes' name='mobile-web-app-capable'/>
                     <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
-                    <meta name="theme-color" content="#9B76AA" />
+                    <meta name="theme-color" content="#373737" />
                     <meta name="description" content="Generic news, easy to read" />
                     <link rel="manifest" href="/manifest.json" />
                 </Head>

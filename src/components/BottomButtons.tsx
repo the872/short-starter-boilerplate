@@ -29,8 +29,8 @@ export const BottomButtons = () => {
                 popup.style.right = '1rem'
                 popup.style.backgroundColor = '#fff'
                 popup.style.fontWeight = '900'
-                popup.style.color = '#9B76AA'
-                popup.style.border = '3px solid #9B76AA'
+                popup.style.color = '#373737'
+                popup.style.border = '3px solid #373737'
                 popup.style.padding = '0.5rem 1rem'
                 popup.style.borderRadius = '1rem'
                 document.body.appendChild(popup)
