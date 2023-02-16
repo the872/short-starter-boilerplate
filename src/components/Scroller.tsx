@@ -101,7 +101,7 @@ export const Scroller = ({ title }: { title: string }) => {
                 css={{
                     position: 'absolute',
                     top: !isMobile ? '2rem' : '2.75rem',
-                    left: '2rem',
+                    left: !isMobile ? '2rem' : '1.5rem',
                     height: !isMobile ? '5rem' : '3.5rem',
                     width: !isMobile ? '5rem' : '3.5rem',
                 }}
