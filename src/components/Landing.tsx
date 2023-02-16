@@ -70,7 +70,6 @@ export const Landing = () => (
                     borderRadius: '0.5rem',
                     padding: '2rem 2.875rem',
                     textDecoration: 'none',
-                    color: '#75AA9B',
                     fontSize: '2rem',
                     border: '0.5rem solid #75AA9B'
                 }}
@@ -83,8 +82,9 @@ export const Landing = () => (
                       opacity: 0;
                     }
                 }`}
+                color="#75AA9B"
                 bg="#373737"
-                _hover={{ bg: '#fff' }}
+                _hover={{ bg: '#75AA9B', color: '#373737' }}
             >
                 <span>FREE ACCESS</span>
             </Button>
