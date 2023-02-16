@@ -101,7 +101,7 @@ export const VideoComponent = (props: FlexProps) => {
     };
 
     return (
-        <Flex justifyContent="center" width="100%" height="100vh" background="#9B76AA">
+        <Flex justifyContent="center" width="100%" height="100vh" background="#373737">
             <video
                 loop
                 muted
@@ -126,7 +126,7 @@ export const VideoComponent = (props: FlexProps) => {
                     borderRadius="5rem"
                     onClick={handlePlayPause}
                     boxShadow="inset 0px 2px 5px rgba(0, 0, 0, 0.25)"
-                    icon={<PlayCircleIcon style={{ fill: '#9B76AA', fontSize: '5rem' }} />}
+                    icon={<PlayCircleIcon style={{ fill: '#373737', fontSize: '5rem' }} />}
                     aria-label="Play"
                     style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}
                 />
@@ -137,7 +137,7 @@ export const VideoComponent = (props: FlexProps) => {
                 borderRadius="5px"
                 onClick={handleMuteUnmute}
                 boxShadow="inset 0px 2px 5px rgba(0, 0, 0, 0.25)"
-                icon={isMuted ? <Mute style={{ fill: '#9B76AA', fontSize: '2rem' }} /> : <Unmute style={{ fill: '#9B76AA', fontSize: '2rem' }} />}
+                icon={isMuted ? <Mute style={{ fill: '#373737', fontSize: '2rem' }} /> : <Unmute style={{ fill: '#373737', fontSize: '2rem' }} />}
                 aria-label={isMuted ? "Mute" : "Unmute"}
                 style={{ position: 'absolute', top: '3rem', right: '2rem' }}
             />

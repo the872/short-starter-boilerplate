@@ -40,7 +40,7 @@ export const TextComponent = (props: FlexProps) => {
     }, [displayedText, loading, text, isInView]);
 
     return (
-        <Box height="100vh" background="#9B76AA" width="100vw">
+        <Box height="100vh" background="#373737" width="100vw">
             <Flex justifyContent="center">
                 <Box minWidth="50%" height={84} maxWidth={900} background="#ffffff75" padding={{ xl: "1rem", base: "0.75rem" }} marginTop="2rem" borderRadius="1rem" display="flex" alignItems="center">
                     <Heading width="calc(100vw - 10rem)" maxWidth={900} fontSize={{ xl: "xl", base: "md" }} color="#000" textAlign="center">
@@ -67,7 +67,7 @@ export const TextComponent = (props: FlexProps) => {
                         display: 'none',
                     },
                 }}
-                display="block" width="100%" maxWidth={900} p="1rem" m="1rem" borderRadius="1rem" background="#ffffff75" color="#000" textAlign="start" overflow="scroll">
+                display="block" width="100%" maxWidth={900} p="1rem 2rem" m="1rem" borderRadius="1rem" background="#ffffff75" color="#000" textAlign="start" overflow="scroll">
                 {displayedText}
                 <Box
                     as="span"

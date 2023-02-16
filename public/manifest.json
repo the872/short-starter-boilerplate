@@ -3,7 +3,7 @@
   "short_name": "Generic Page",
   "id": "/",
   "background_color": "#77A59B",
-  "theme_color": "#9B76AA",
+  "theme_color": "#373737",
   "orientation": "portrait",
   "description" : "Generic news, easy to read",
   "icons": [
@@ -22,6 +22,15 @@
       "src": "/icons/icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "View Feed",
+      "short_name": "Feed",
+      "description": "/icons/icon-192x192.png",
+      "url": "/feed",
+      "icons": [{ "src": "/images/today.png", "sizes": "192x192" }]
     }
   ],
   "start_url": "/",

@@ -108,7 +108,7 @@ export const Scroller = ({ title }: { title: string }) => {
                     width: !isMobile ? '5rem' : '3rem',
                 }}
             >
-                <Image alt="Generic Page" loading="lazy" src="https://iili.io/HEwxs7n.png" />
+                <Image alt="Generic Page" loading="lazy" src="https://iili.io/HGHb612.md.png" />
             </Flex>
         </>
     );
