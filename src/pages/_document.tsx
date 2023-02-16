@@ -17,7 +17,7 @@ export default class Document extends NextDocument {
                     <meta name="description" content="Generic news, easy to read" />
                     <link rel="manifest" href="/manifest.json" />
                 </Head>
-                <body style={{ background: '#9B76AA' }}>
+                <body style={{ background: '#373737' }}>
                 {/* Make Color mode to persists when you refresh the page. */}
                 <ColorModeScript />
                 <Main />
