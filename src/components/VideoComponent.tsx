@@ -67,7 +67,6 @@ export const VideoComponent = (props: FlexProps) => {
             const handlePause = () => {
                 setIsPlaying(false);
                 setIsMuted(true);
-                videoRef.current.muted = true;
             };
 
             videoRef.current.addEventListener('play', handlePlay);

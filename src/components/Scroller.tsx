@@ -6,7 +6,7 @@ import { BottomButtons } from './BottomButtons';
 import { LoadingComponent} from "./LoadingComponent";
 
 export const Scroller = ({ title }: { title: string }) => {
-    const [data, setData] = useState(Array(2).fill(10));
+    const [data, setData] = useState(Array(5).fill(5));
     const [loading, setLoading] = useState(false);
     const [isMobile, setMobile] = useState(false);
 
@@ -35,13 +35,13 @@ export const Scroller = ({ title }: { title: string }) => {
             document.getElementById("scroller").clientHeight
         ) {
             setLoading(true);
-            setData([...Array(data.length + 1).fill(data.length + 10)]);
+            setData([...Array(data.length + 10).fill(data.length + 10)]);
             setTimeout(() => {
                 setLoading(false);
 
-                if (document.getElementById("scroller").scrollHeight - document.getElementById("scroller").scrollTop < 1200) {
-                    document.getElementById("scroller").scrollTo(0, document.getElementById("scroller").clientHeight * -10);
-                }
+                // if (document.getElementById("scroller").scrollHeight - document.getElementById("scroller").scrollTop < 1200) {
+                //     document.getElementById("scroller").scrollTo(0, document.getElementById("scroller").clientHeight * -10);
+                // }
             }, 1000);
         }
     };
@@ -101,7 +101,7 @@ export const Scroller = ({ title }: { title: string }) => {
                             <BottomButtons />
                         </>
                     ))}
-                    <Box key="-1" position="relative" scrollSnapAlign="start" scrollSnapStop="always" height="100%" width="100%">
+                    <Box display="none" key="-1" position="relative" scrollSnapAlign="start" scrollSnapStop="always" height="100%" width="100%">
                         <LoadingComponent />
                     </Box>
                 </Flex>
