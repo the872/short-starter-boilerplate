@@ -15,7 +15,6 @@ export const Scroller = ({ title }: { title: string }) => {
             || /iPad|iPhone|iPod/.test(userAgent)
             || (window.innerWidth <= 800 && window.innerHeight <= 600)) {
             setMobile(true);
-            console.log('mobile')
         } else {
             setMobile(false);
         }
@@ -35,7 +34,6 @@ export const Scroller = ({ title }: { title: string }) => {
             document.documentElement.clientHeight
         ) {
             setLoading(true);
-            console.log('called');
             setData([...Array(data.length + 1).fill(data.length + 10)]);
             setTimeout(() => {
                 setLoading(false);
@@ -102,10 +100,10 @@ export const Scroller = ({ title }: { title: string }) => {
             <Flex
                 css={{
                     position: 'absolute',
-                    top: !isMobile ? '2rem' : '3rem',
+                    top: !isMobile ? '2rem' : '2.75rem',
                     left: '2rem',
-                    height: !isMobile ? '5rem' : '3rem',
-                    width: !isMobile ? '5rem' : '3rem',
+                    height: !isMobile ? '5rem' : '3.5rem',
+                    width: !isMobile ? '5rem' : '3.5rem',
                 }}
             >
                 <Image alt="Generic Page" loading="lazy" src="https://iili.io/HGHb612.md.png" />
