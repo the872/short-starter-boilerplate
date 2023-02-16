@@ -5,7 +5,6 @@ export const TextComponent = (props: FlexProps) => {
     const [displayedText, setDisplayedText] = useState("");
     const [loading, setLoading] = useState(true);
     const [isInView, setIsInView] = useState(false);
-    const [error, setError] = useState(false);
     const text = "A US F-22 fighter jet has shot down a cylindrical object in Canadian airspace on Saturday, the second such incident in two days. The US military also scrambled fighter jets to investigate a radar anomaly in Montana. Canadian Prime Minister Justin Trudeau announced the shootdown in the northern Yukon territory, adding that Canadian forces would recover and analyze the wreckage. The Canadian Defense Minister declined to speculate on the origin of the object but said it posed a risk to civilian air traffic and was shot down using an AIM 9X missile. The Pentagon said that the NORAD detected the object over Alaska on Friday and U.S. fighter jets monitored it as it crossed into Canadian airspace, where Canadian CF-18 and CP-140 aircraft joined the formation. The U.S. President Joe Biden authorized the U.S. military to work with Canada to take down the high-altitude craft."
     const textRef = useRef<HTMLDivElement>(null);
     const [isMobile, setMobile] = useState(false);
@@ -16,7 +15,6 @@ export const TextComponent = (props: FlexProps) => {
             || /iPad|iPhone|iPod/.test(userAgent)
             || (window.innerWidth <= 800 && window.innerHeight <= 600)) {
             setMobile(true);
-            console.log('mobile')
         } else {
             setMobile(false);
         }
@@ -54,7 +52,7 @@ export const TextComponent = (props: FlexProps) => {
                         setDisplayedText(text.slice(0, displayedText.length + 1));
                         textRef.current.scrollTop = textRef.current.scrollHeight;
                     } catch (error) {
-                        setError(true);
+                        setDisplayedText(text);
                         clearInterval(intervalId);
                     }
                 }
