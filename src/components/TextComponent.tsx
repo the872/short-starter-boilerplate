@@ -80,7 +80,7 @@ export const TextComponent = (props: FlexProps) => {
                     ref={textRef}
                     fontSize={{ xl: "xl", base: "md" }}
                     lineHeight={{ xl: "3rem", base: "2rem" }}
-                    paddingBottom={"33vh !important"}
+                    paddingBottom={"44vh !important"}
                     css={{
                         '::-webkit-scrollbar': {
                             width: 0,

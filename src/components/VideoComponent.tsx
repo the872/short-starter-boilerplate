@@ -61,11 +61,13 @@ export const VideoComponent = (props: FlexProps) => {
             const handlePlay = () => {
                 setIsPlaying(true);
                 setIsMuted(false);
+                videoRef.current.muted = false;
             };
 
             const handlePause = () => {
                 setIsPlaying(false);
                 setIsMuted(true);
+                videoRef.current.muted = true;
             };
 
             videoRef.current.addEventListener('play', handlePlay);
@@ -93,9 +95,12 @@ export const VideoComponent = (props: FlexProps) => {
         if (videoRef.current) {
             if (videoRef.current.paused || videoRef.current.ended) {
                 videoRef.current.play();
-                handleMuteUnmute();
+                setIsMuted(false);
+                videoRef.current.muted = false;
             } else {
                 videoRef.current.pause();
+                setIsMuted(true);
+                videoRef.current.muted = true;
             }
         }
     };

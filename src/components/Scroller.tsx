@@ -6,7 +6,7 @@ import { BottomButtons } from './BottomButtons';
 import { LoadingComponent} from "./LoadingComponent";
 
 export const Scroller = ({ title }: { title: string }) => {
-    const [data, setData] = useState(Array(10).fill(10));
+    const [data, setData] = useState(Array(2).fill(10));
     const [loading, setLoading] = useState(false);
     const [isMobile, setMobile] = useState(false);
 
