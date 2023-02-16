@@ -38,6 +38,7 @@ export const VideoComponent = (props: FlexProps) => {
         if (videoRef.current) {
             // check if video is paused or ended on first load
             setIsPlaying(!videoRef.current.paused && !videoRef.current.ended);
+            setIsMuted(videoRef.current.paused && videoRef.current.ended)
 
             observer = new IntersectionObserver((entries) => {
                 entries.forEach((entry) => {
@@ -62,10 +63,12 @@ export const VideoComponent = (props: FlexProps) => {
             // use video element's own `play` and `pause` events to check if it's playing
             const handlePlay = () => {
                 setIsPlaying(true);
+                setIsMuted(false);
             };
 
             const handlePause = () => {
                 setIsPlaying(false);
+                setIsMuted(true);
             };
 
             videoRef.current.addEventListener('play', handlePlay);
