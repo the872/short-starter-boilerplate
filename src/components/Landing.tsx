@@ -54,7 +54,7 @@ export const Landing = () => {
         height: 100%;
         cursor: pointer;
         text-decoration: none;
-        background: #9b76aa;
+        background: #373737;
         &:hover {
           text-decoration: none;
         }
@@ -78,7 +78,7 @@ export const Landing = () => {
                     width="20rem"
                     margin="5rem 0"
                     alt="Generic Page"
-                    src="https://iili.io/HEwxs7n.png"
+                    src="https://iili.io/HGHb612.md.png"
                 />
                 <Flex
                     style={{
