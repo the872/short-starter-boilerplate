@@ -44,7 +44,8 @@ export const TextComponent = (props: FlexProps) => {
         let intervalId = null;
         if (loading && isInView) {
             intervalId = setInterval(() => {
-                if (displayedText.length === text.length) {
+                if (displayedText.length === text.length || isMobile) {
+                    setDisplayedText(text);
                     setLoading(false);
                     clearInterval(intervalId);
                 } else if (displayedText.length < text.length) {
