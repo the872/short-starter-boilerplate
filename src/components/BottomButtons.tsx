@@ -1,5 +1,4 @@
-import { useColorMode, IconButton, Flex } from '@chakra-ui/react'
-import { SunIcon, MoonIcon, ArrowUpIcon, ArrowDownIcon } from '@chakra-ui/icons'
+import { IconButton, Flex } from '@chakra-ui/react'
 import ThumbUpIcon from '@mui/icons-material/ThumbUp'
 import ThumbDownIcon from '@mui/icons-material/ThumbDown'
 import ReplyIcon from '@mui/icons-material/Reply'

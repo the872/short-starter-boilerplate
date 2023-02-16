@@ -1,4 +1,4 @@
-import {Image, Flex, Link} from '@chakra-ui/react';
+import {Button, Image, Flex, Link} from '@chakra-ui/react';
 import {Span} from "next/dist/trace";
 
 export const Landing = () => (
@@ -7,6 +7,8 @@ export const Landing = () => (
         onClick={(e) => {
             const target = e.target as HTMLDivElement;
             target.style.animation = "fadeOut 1s ease-in-out";
+            document.getElementById("logo-landing").style.animation = "fadeOut 1s ease-in-out";
+            document.getElementById("button-landing").style.animation = "fadeOut 1s ease-in-out";
         }}
         css={`
           @keyframes fadeOut {
@@ -44,27 +46,48 @@ export const Landing = () => (
             flexDirection="column"
         >
             <Image
+                id="logo-landing"
                 height="20rem"
                 width="20rem"
                 margin="5rem 0"
                 alt="Generic Page"
                 style={{ pointerEvents: 'none' }}
                 src="https://iili.io/HGHb612.md.png"
+                css={`
+                @keyframes fadeOut {
+                    0% {
+                      opacity: 1;
+                    }
+                    100% {
+                      opacity: 0;
+                    }
+                }`}
             />
-            <Flex
+            <Button
+                id="button-landing"
                 style={{
-                    backgroundColor: 'white',
                     fontWeight: 800,
                     borderRadius: '0.5rem',
-                    padding: '0.5rem 1rem',
+                    padding: '2rem 2.875rem',
                     textDecoration: 'none',
-                    color: '#373737',
+                    color: '#75AA9B',
                     fontSize: '2rem',
                     border: '0.5rem solid #75AA9B'
                 }}
+                css={`
+                @keyframes fadeOut {
+                    0% {
+                      opacity: 1;
+                    }
+                    100% {
+                      opacity: 0;
+                    }
+                }`}
+                bg="#373737"
+                _hover={{ bg: '#fff' }}
             >
-                FREE ACCESS
-            </Flex>
+                <span>FREE ACCESS</span>
+            </Button>
         </Flex>
     </Link>
 );

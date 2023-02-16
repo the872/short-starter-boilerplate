@@ -3,6 +3,7 @@ import { Box, Flex, Image } from '@chakra-ui/react';
 import { VideoComponent } from './VideoComponent';
 import { TextComponent } from './TextComponent';
 import { BottomButtons } from './BottomButtons';
+import { LoadingComponent} from "./LoadingComponent";
 
 export const Scroller = ({ title }: { title: string }) => {
     const [data, setData] = useState(Array(10).fill(10));
@@ -29,14 +30,18 @@ export const Scroller = ({ title }: { title: string }) => {
     const handleScroll = () => {
         if (
             !loading &&
-            document.documentElement.scrollHeight -
-            document.documentElement.scrollTop ===
-            document.documentElement.clientHeight
+            document.getElementById("scroller").scrollHeight -
+            document.getElementById("scroller").scrollTop ===
+            document.getElementById("scroller").clientHeight
         ) {
             setLoading(true);
             setData([...Array(data.length + 1).fill(data.length + 10)]);
             setTimeout(() => {
                 setLoading(false);
+
+                if (document.getElementById("scroller").scrollHeight - document.getElementById("scroller").scrollTop < 1200) {
+                    document.getElementById("scroller").scrollTo(0, document.getElementById("scroller").clientHeight * -10);
+                }
             }, 1000);
         }
     };
@@ -64,6 +69,7 @@ export const Scroller = ({ title }: { title: string }) => {
     return (
         <>
             <Flex
+                id="scroller"
                 justifyContent="center"
                 alignItems="center"
                 height="100vh"
@@ -95,6 +101,9 @@ export const Scroller = ({ title }: { title: string }) => {
                             <BottomButtons />
                         </>
                     ))}
+                    <Box key="-1" position="relative" scrollSnapAlign="start" scrollSnapStop="always" height="100%" width="100%">
+                        <LoadingComponent />
+                    </Box>
                 </Flex>
             </Flex>
             <Flex
