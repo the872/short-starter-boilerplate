@@ -1,9 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { Flex, FlexProps, IconButton } from '@chakra-ui/react';
-import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 import Mute from '@mui/icons-material/VolumeMute';
 import Unmute from '@mui/icons-material/VolumeUp';
-import ThumbDownIcon from "@mui/icons-material/ThumbDown";
 import PlayCircleIcon from '@mui/icons-material/PlayCircle';
 
 export const VideoComponent = (props: FlexProps) => {
@@ -19,7 +17,6 @@ export const VideoComponent = (props: FlexProps) => {
             || /iPad|iPhone|iPod/.test(userAgent)
             || (window.innerWidth <= 800 && window.innerHeight <= 600)) {
             setMobile(true);
-            console.log('mobile')
         } else {
             setMobile(false);
         }

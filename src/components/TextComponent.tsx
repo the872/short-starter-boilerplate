@@ -57,7 +57,7 @@ export const TextComponent = (props: FlexProps) => {
                         clearInterval(intervalId);
                     }
                 }
-            }, 66);
+            }, Math.floor(Math.random() * 91) + 20);
         }
         return () => {
             clearInterval(intervalId);

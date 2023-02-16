@@ -22,21 +22,6 @@ export default class Document extends NextDocument {
                 <ColorModeScript />
                 <Main />
                 <NextScript />
-                <script
-                    dangerouslySetInnerHTML={{
-                        __html: `
-                if ('serviceWorker' in navigator) {
-                  window.addEventListener('load', function() {
-                    navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
-                      console.log('Service worker registration successful');
-                    }, function(err) {
-                      console.log('Service worker registration failed: ', err);
-                    });
-                  });
-                }
-              `,
-                    }}
-                />
                 </body>
             </Html>
         )
