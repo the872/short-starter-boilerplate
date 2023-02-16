@@ -70,7 +70,7 @@ export const TextComponent = (props: FlexProps) => {
                 <Box minWidth="50%" height={84} maxWidth={900} backgroundImage={isMobile ? "linear-gradient(to right, #76AB9B 0%, #76AB9B 10%, #fff 40%, #fff 100%)" : "linear-gradient(to bottom, #75AA9B 0%, #75AA9B 100%)"} padding={{ xl: "1rem", base: "0.75rem" }} marginTop="1.84rem" borderRadius="0.5rem" display="flex" alignItems="center">
                     <Heading paddingLeft={isMobile && "5rem"} width="calc(100vw - 3rem)" maxWidth={900} fontSize={{ xl: "xl", base: "md" }} color="#000" textAlign={isMobile ? "start" : "center"}>
                         <Tooltip label="World News">
-                            <p style={{ userSelect: 'none', fontWeight: 800, textTransform: 'capitalize' }}>U.S. fighter jet shoots down unidentified cylindrical object over Canada</p>
+                            <p style={{ userSelect: 'none', pointerEvents: 'none', fontWeight: 800, textTransform: 'capitalize' }}>U.S. fighter jet shoots down unidentified cylindrical object over Canada</p>
                         </Tooltip>
                     </Heading>
                 </Box>

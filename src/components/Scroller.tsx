@@ -106,11 +106,13 @@ export const Scroller = ({ title }: { title: string }) => {
                     width: !isMobile ? '5rem' : '3.5rem',
                 }}
             >
-                <Image alt="Generic Page" loading="lazy" src="https://iili.io/HGHb612.md.png" />
+                <Image style={{ pointerEvents: 'none' }} alt="Generic Page" loading="lazy" src="https://iili.io/HGHb612.md.png" />
             </Flex>
         </>
     );
+
 };
+
 
 Scroller.defaultProps = {
     title: 'Generic Page',

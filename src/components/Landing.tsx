@@ -48,6 +48,7 @@ export const Landing = () => (
                 width="20rem"
                 margin="5rem 0"
                 alt="Generic Page"
+                style={{ pointerEvents: 'none' }}
                 src="https://iili.io/HGHb612.md.png"
             />
             <Flex
