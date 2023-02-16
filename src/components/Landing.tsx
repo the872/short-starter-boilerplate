@@ -57,7 +57,7 @@ export const Landing = () => (
                     borderRadius: '5px',
                     padding: '0.5rem 1rem',
                     textDecoration: 'none',
-                    color: '#9B76AA',
+                    color: '#373737',
                     fontSize: '2rem',
                 }}
             >
