@@ -2,7 +2,7 @@
   "name": "Generic Page",
   "short_name": "Generic Page",
   "id": "/",
-  "background_color": "#77A59B",
+  "background_color": "#75AA9B",
   "theme_color": "#373737",
   "orientation": "portrait",
   "description" : "Generic news, easy to read",

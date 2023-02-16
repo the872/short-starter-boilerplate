@@ -52,7 +52,7 @@ export const BottomButtons = () => {
                 boxShadow="inset 0px 2px 5px rgba(0, 0, 0, 0.25)"
                 icon={<ThumbUpIcon style={{ fill: '#373737' }} />}
                 aria-label="Like"
-                _hover={{ bg: '#76AB9B' }}
+                _hover={{ bg: '#75AA9B' }}
             />
             <IconButton
                 height="3rem"
@@ -61,7 +61,7 @@ export const BottomButtons = () => {
                 boxShadow="inset 0px 2px 5px rgba(0, 0, 0, 0.25)"
                 icon={<ThumbDownIcon style={{ fill: '#373737' }} />}
                 aria-label="Dislike"
-                _hover={{ bg: '#76AB9B' }}
+                _hover={{ bg: '#75AA9B' }}
             />
             <IconButton
                 height="3rem"
@@ -71,7 +71,7 @@ export const BottomButtons = () => {
                 transform="scaleX(-1)"
                 icon={<ReplyIcon style={{ fill: '#373737', fontSize: '2rem' }} />}
                 aria-label="Share"
-                _hover={{ bg: '#76AB9B' }}
+                _hover={{ bg: '#75AA9B' }}
                 onClick={handleShareClick}
             />
         </Flex>
