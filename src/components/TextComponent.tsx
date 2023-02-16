@@ -61,54 +61,53 @@ export const TextComponent = (props: FlexProps) => {
     return (
         <Box height="100vh" background="#373737" width="100vw">
             <Flex justifyContent="center">
-                <Box minWidth="50%" height={84} maxWidth={900} backgroundImage={isMobile ? "linear-gradient(to right, #76AB9B 0%, #76AB9B 15%, #939393 40%, #939393 100%)" : "linear-gradient(to bottom, #75AA9B 0%, #75AA9B 100%)"} padding={{ xl: "1rem", base: "0.75rem" }} marginTop="1.84rem" borderRadius="0.5rem" display="flex" alignItems="center">
-                    <Heading paddingLeft="5rem" width="calc(100vw - 3.5rem)" maxWidth={900} fontSize={{ xl: "xl", base: "md" }} color="#000" textAlign="center">
+                <Box minWidth="50%" height={84} maxWidth={900} backgroundImage={isMobile ? "linear-gradient(to right, #76AB9B 0%, #76AB9B 10%, #fff 40%, #fff 100%)" : "linear-gradient(to bottom, #75AA9B 0%, #75AA9B 100%)"} padding={{ xl: "1rem", base: "0.75rem" }} marginTop="1.84rem" borderRadius="0.5rem" display="flex" alignItems="center">
+                    <Heading paddingLeft="4rem" width="calc(100vw - 3rem)" maxWidth={900} fontSize={{ xl: "xl", base: "md" }} color="#000" textAlign="center">
                         <Tooltip label="World News">
-                        <a style={{ textDecoration: 'underline', fontWeight: 800, textTransform: 'capitalize' }} target="_blank" href="https://www.reuters.com/world/us/us-still-gives-no-details-about-alaska-ufo-new-object-seen-over-canada-2023-02-11/">U.S. fighter jet shoots down unidentified cylindrical object over Canada</a>
-                    </Tooltip>
-                </Heading>
-            </Box>
-        </Flex>
-        <Flex justifyContent="center" height="calc(100vh - 275px)">
-            <Text
-                ref={textRef}
-                fontSize={{ xl: "xl", base: "md" }}
-                lineHeight={{ xl: "3rem", base: "2rem" }}
-                css={{
-                    '::-webkit-scrollbar': {
-                        width: 0,
-                        height: 0,
-                        display: 'none',
-                    },
-                    '::-moz-scrollbar': {
-                        width: 0,
-                        height: 0,
-                        display: 'none',
-                    },
-                }}
-                display="block" width="100%" maxWidth={900} p="1rem 2rem" m="1rem" borderRadius="0.5rem" background="#ffffff75" color="#000" textAlign="start" overflow="scroll" letterSpacing="1px" fontWeight="400">
-                {displayedText}
-                <Box
-                    as="span"
-                    css={{
-                        color: '#ffffff00',
-                        background: '#000000',
-                        animation: 'rotation 1s linear infinite',
-                        '@keyframes rotation': {
-                            from: {
-                                background: '#000000'
-                            },
-                            to: {
-                                background: '#00000000'
-                            },
-                        }
-                    }}
-                >
-                    _
+                            <p style={{  fontWeight: 800, textTransform: 'capitalize' }}>U.S. fighter jet shoots down unidentified cylindrical object over Canada</p>
+                        </Tooltip>
+                    </Heading>
                 </Box>
-            </Text>
-
-        </Flex>
+            </Flex>
+            <Flex justifyContent="center" height="calc(100vh - 275px)">
+                <Text
+                    ref={textRef}
+                    fontSize={{ xl: "xl", base: "md" }}
+                    lineHeight={{ xl: "3rem", base: "2rem" }}
+                    css={{
+                        '::-webkit-scrollbar': {
+                            width: 0,
+                            height: 0,
+                            display: 'none',
+                        },
+                        '::-moz-scrollbar': {
+                            width: 0,
+                            height: 0,
+                            display: 'none',
+                        },
+                    }}
+                    display="block" width="100%" maxWidth={900} p="1rem 2rem" m="1rem" borderRadius="0.5rem" background="#ffffff75" color="#000" textAlign="start" overflow="scroll" letterSpacing="1px" fontWeight="400">
+                    {displayedText}
+                    <Box
+                        as="span"
+                        css={{
+                            color: '#ffffff00',
+                            background: '#000000',
+                            animation: 'rotation 1s linear infinite',
+                            '@keyframes rotation': {
+                                from: {
+                                    background: '#000000'
+                                },
+                                to: {
+                                    background: '#00000000'
+                                },
+                            }
+                        }}
+                    >
+                        _
+                    </Box>
+                </Text>
+            </Flex>
     </Box>
 )
 }
