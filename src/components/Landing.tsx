@@ -54,11 +54,12 @@ export const Landing = () => (
                 style={{
                     backgroundColor: 'white',
                     fontWeight: 800,
-                    borderRadius: '5px',
+                    borderRadius: '0.5rem',
                     padding: '0.5rem 1rem',
                     textDecoration: 'none',
                     color: '#373737',
                     fontSize: '2rem',
+                    border: '0.5rem solid #75AA9B'
                 }}
             >
                 FREE ACCESS
