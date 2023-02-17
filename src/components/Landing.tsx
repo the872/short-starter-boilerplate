@@ -1,5 +1,4 @@
 import {Button, Image, Flex, Link} from '@chakra-ui/react';
-import {Span} from "next/dist/trace";
 
 export const Landing = () => (
     <Link

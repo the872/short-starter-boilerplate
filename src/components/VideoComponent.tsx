@@ -94,12 +94,8 @@ export const VideoComponent = (props: FlexProps) => {
         if (videoRef.current) {
             if (videoRef.current.paused || videoRef.current.ended) {
                 videoRef.current.play();
-                setIsMuted(false);
-                videoRef.current.muted = false;
             } else {
                 videoRef.current.pause();
-                setIsMuted(true);
-                videoRef.current.muted = true;
             }
         }
     };
