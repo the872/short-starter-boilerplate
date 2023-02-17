@@ -119,7 +119,6 @@ export const VideoComponent = (props: FlexProps) => {
                     objectFit: isMobile ? 'cover' : 'contain',
                     cursor: 'pointer'
                 }}
-                preload="false"
                 ref={videoRef}
                 data-src="https://assets.mixkit.co/videos/preview/mixkit-waves-in-the-water-1164-large.mp4"
                 height="-webkit-fill-available"
